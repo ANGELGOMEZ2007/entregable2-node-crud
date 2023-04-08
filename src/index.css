@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -19,7 +21,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10rem ;
+    margin-top: 10rem;
 }
 
 .box__container {
@@ -35,23 +37,24 @@ body {
 
 }
 
-.title__country{
+.title__country {
     font-weight: 600;
 }
 
-.p__description{
-    font-weight:bolder;  
+.p__description {
+    font-weight: bolder;
 }
 
-.box__image{
+.box__image {
 
-    display: flex;justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .section__container {
     width: 100%;
     display: flex;
-   
+
 }
 
 .box__info {
@@ -72,12 +75,12 @@ body {
     gap: .5rem;
 }
 
-.ul__title span{
-   font-size: medium;
-   font-weight: 600;
+.ul__title span {
+    font-size: medium;
+    font-weight: 600;
 }
 
-.button{
+.button {
     background-color: #909090;
     padding: .5rem 1rem;
     border-radius: .2rem;
@@ -87,13 +90,60 @@ body {
     cursor: pointer;
 }
 
+
+
+
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------preloaders------------------------------------------------------- */
+
+.container_loader {
+    background-color: #909090;
+    margin-top: 25rem;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    transition: background-color 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    border: 15px solid rgb(38, 58, 187);
+    border-top-color: rgb(216, 206, 14);
+    border-top-style: groove;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+
+    -webkit-animation: spin 1.5s linear infinite;
+    -o-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 @media (max-width: 630px) {
     .App {
-        margin-top: 5rem ;
+        margin-top: 5rem;
     }
 
     .box__container {
-     margin: 0 1rem;
+        margin: 0 1rem;
     }
 
     .section__container {
